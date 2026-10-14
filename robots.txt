@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Allow: /css/
+Allow: /js/
+
+# Host and Sitemap
+Sitemap: https://wealthblueprint2026.com/sitemap.xml
