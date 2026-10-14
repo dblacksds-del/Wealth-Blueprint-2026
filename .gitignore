@@ -1,0 +1,76 @@
+# Dependencies
+node_modules/
+/.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+
+# Production & Build outputs
+dist/
+build/
+out/
+.next/
+.nuxt/
+.output/
+.vuepress/dist/
+.serverless/
+.fusebox/
+.dynamodb/
+.parcel-cache/
+.turbo/
+.cache/
+.astro/
+
+# Debug and Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Environment and Local Config
+.env
+.env.development.local
+.env.test.local
+.env.production.local
+.env.local
+*.env
+!.env.example
+
+# Testing and Coverage
+coverage/
+.nyc_output/
+cypress/videos/
+cypress/screenshots/
+playwright-report/
+test-results/
+
+# Editor & OS files
+.DS_Store
+Thumbs.db
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+!.vscode/launch.json
+
+# Temporary files & Caches
+*.tsbuildinfo
+.eslintcache
+.stylelintcache
+.prettiercache
+.temp/
+tmp/
+.vercel/
+.netlify/
