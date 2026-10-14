@@ -383,6 +383,93 @@
     calculate();
   };
 
+  // 10. Simple Print-on-Demand Profit Estimator
+  const initPodEstimator = () => {
+    const retailInput = document.getElementById('pod-retail');
+    if (!retailInput) return;
+
+    const costInput = document.getElementById('pod-cost');
+    const shippingInput = document.getElementById('pod-shipping');
+    const feeInput = document.getElementById('pod-fee-pct');
+
+    const outTotalCost = document.getElementById('pod-out-total-cost');
+    const outNetProfit = document.getElementById('pod-out-net-profit');
+    const outMargin = document.getElementById('pod-out-margin');
+
+    const calculate = () => {
+      const retail = Math.max(0, parseFloat(retailInput.value) || 0);
+      const cost = Math.max(0, parseFloat(costInput ? costInput.value : 0) || 0);
+      const shipping = Math.max(0, parseFloat(shippingInput ? shippingInput.value : 0) || 0);
+      const feePct = Math.max(0, Math.min(100, parseFloat(feeInput ? feeInput.value : 0) || 0));
+
+      const platformFee = retail * (feePct / 100);
+      const totalCost = cost + shipping + platformFee;
+      const netProfit = retail - totalCost;
+      const netMargin = retail > 0 ? (netProfit / retail) * 100 : 0;
+
+      if (outTotalCost) outTotalCost.textContent = `$${totalCost.toFixed(2)}`;
+      if (outNetProfit) {
+        outNetProfit.textContent = `$${netProfit.toFixed(2)}`;
+        outNetProfit.style.color = netProfit >= 0 ? 'var(--accent-emerald)' : '#dc2626';
+      }
+      if (outMargin) {
+        outMargin.textContent = `${netMargin.toFixed(1)}%`;
+        outMargin.style.color = netMargin >= 0 ? 'var(--accent-emerald)' : '#dc2626';
+      }
+    };
+
+    [retailInput, costInput, shippingInput, feeInput].forEach((el) => {
+      if (el) el.addEventListener('input', calculate);
+    });
+
+    calculate();
+  };
+
+  // 11. Simple Dropshipping Unit Profit Calculator
+  const initDropshippingUnitCalc = () => {
+    const retailInput = document.getElementById('drop-retail');
+    if (!retailInput) return;
+
+    const costInput = document.getElementById('drop-cost');
+    const feeInput = document.getElementById('drop-fee-pct');
+    const affInput = document.getElementById('drop-aff-pct');
+    const refundInput = document.getElementById('drop-refund');
+
+    const outTotalCost = document.getElementById('drop-out-total-cost');
+    const outNetProfit = document.getElementById('drop-out-net-profit');
+    const outMargin = document.getElementById('drop-out-margin');
+
+    const calculate = () => {
+      const retail = Math.max(0, parseFloat(retailInput.value) || 0);
+      const cost = Math.max(0, parseFloat(costInput ? costInput.value : 0) || 0);
+      const feePct = Math.max(0, Math.min(100, parseFloat(feeInput ? feeInput.value : 0) || 0));
+      const affPct = Math.max(0, Math.min(100, parseFloat(affInput ? affInput.value : 0) || 0));
+      const refund = Math.max(0, parseFloat(refundInput ? refundInput.value : 0) || 0);
+
+      const platformFee = retail * (feePct / 100);
+      const affiliateCommission = retail * (affPct / 100);
+      const totalCost = cost + platformFee + affiliateCommission + refund;
+      const netProfit = retail - totalCost;
+      const netMargin = retail > 0 ? (netProfit / retail) * 100 : 0;
+
+      if (outTotalCost) outTotalCost.textContent = `$${totalCost.toFixed(2)}`;
+      if (outNetProfit) {
+        outNetProfit.textContent = `$${netProfit.toFixed(2)}`;
+        outNetProfit.style.color = netProfit >= 0 ? 'var(--accent-emerald)' : '#dc2626';
+      }
+      if (outMargin) {
+        outMargin.textContent = `${netMargin.toFixed(1)}%`;
+        outMargin.style.color = netMargin >= 0 ? 'var(--accent-emerald)' : '#dc2626';
+      }
+    };
+
+    [retailInput, costInput, feeInput, affInput, refundInput].forEach((el) => {
+      if (el) el.addEventListener('input', calculate);
+    });
+
+    calculate();
+  };
+
   // Run on DOM Ready
   document.addEventListener('DOMContentLoaded', () => {
     initTheme();
@@ -394,5 +481,7 @@
     initSupplierChecker();
     initLaunchChecklist();
     initFreelanceEstimator();
+    initPodEstimator();
+    initDropshippingUnitCalc();
   });
 })();
