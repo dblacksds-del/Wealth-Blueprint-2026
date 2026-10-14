@@ -71,4 +71,4 @@ Every guide and article must feature the exact verified honest byline:
     <!-- PASTE ADSENSE AD UNIT CODE HERE -->
     ```
   - Display nothing on screen until real AdSense unit code is pasted.
-- **Production Domain**: Canonical URLs and sitemap URLs must always use `https://wealth-blueprint-2026.vercel.app`.
+- **Production Domain**: Canonical URLs and sitemap URLs must always use `https://wealthblueprinthub.com`.

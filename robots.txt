@@ -4,4 +4,4 @@ Allow: /css/
 Allow: /js/
 
 # Host and Sitemap
-Sitemap: https://wealth-blueprint-2026.vercel.app/sitemap.xml
+Sitemap: https://wealthblueprinthub.com/sitemap.xml
