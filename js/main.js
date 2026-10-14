@@ -348,6 +348,41 @@
     updateProgress();
   };
 
+  // 9. Simple Freelance Take-Home Estimator (Plain Language & Editable Assumptions)
+  const initFreelanceEstimator = () => {
+    const priceInput = document.getElementById('freelance-price');
+    if (!priceInput) return;
+
+    const feeInput = document.getElementById('freelance-fee-pct');
+    const hoursInput = document.getElementById('freelance-hours');
+
+    const outGross = document.getElementById('freelance-out-gross');
+    const outFee = document.getElementById('freelance-out-fee');
+    const outNet = document.getElementById('freelance-out-net');
+    const outHourly = document.getElementById('freelance-out-hourly');
+
+    const calculate = () => {
+      const price = Math.max(0, parseFloat(priceInput.value) || 0);
+      const feePct = Math.max(0, Math.min(100, parseFloat(feeInput ? feeInput.value : 10) || 0));
+      const hours = Math.max(0.25, parseFloat(hoursInput ? hoursInput.value : 1) || 1);
+
+      const feeAmount = price * (feePct / 100);
+      const netPay = price - feeAmount;
+      const hourlyRate = hours > 0 ? (netPay / hours) : 0;
+
+      if (outGross) outGross.textContent = `$${price.toFixed(2)}`;
+      if (outFee) outFee.textContent = `-$${feeAmount.toFixed(2)}`;
+      if (outNet) outNet.textContent = `$${netPay.toFixed(2)}`;
+      if (outHourly) outHourly.textContent = `$${hourlyRate.toFixed(2)}/hr`;
+    };
+
+    priceInput.addEventListener('input', calculate);
+    if (feeInput) feeInput.addEventListener('input', calculate);
+    if (hoursInput) hoursInput.addEventListener('input', calculate);
+
+    calculate();
+  };
+
   // Run on DOM Ready
   document.addEventListener('DOMContentLoaded', () => {
     initTheme();
@@ -358,5 +393,6 @@
     initDropshippingCalculator();
     initSupplierChecker();
     initLaunchChecklist();
+    initFreelanceEstimator();
   });
 })();
