@@ -1,5 +1,7 @@
 /**
- * Wealth Blueprint 2026 - Main Interactive JavaScript
+ * Wealth Blueprint - Main Interactive JavaScript
+ * Includes: Theme Toggle, Dynamic Auto-Updating Year & Edition Engine,
+ * Business Model Matcher Quiz, and FAQ Accordions.
  */
 
 (function () {
@@ -7,7 +9,7 @@
 
   // 1. Theme Toggle (Dark / Light Mode)
   const initTheme = () => {
-    const savedTheme = localStorage.getItem('wb2026_theme');
+    const savedTheme = localStorage.getItem('wb_theme');
     const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
     const theme = savedTheme || (prefersDark ? 'dark' : 'light');
     document.documentElement.setAttribute('data-theme', theme);
@@ -19,7 +21,7 @@
         const currentTheme = document.documentElement.getAttribute('data-theme');
         const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
         document.documentElement.setAttribute('data-theme', newTheme);
-        localStorage.setItem('wb2026_theme', newTheme);
+        localStorage.setItem('wb_theme', newTheme);
         toggleBtns.forEach((b) => {
           b.innerHTML = newTheme === 'dark' ? '☀️ Light' : '🌙 Dark';
         });
@@ -27,7 +29,59 @@
     });
   };
 
-  // 2. Mobile Nav Toggle
+  // 2. Dynamic Auto-Updating Year & Edition Engine (100% Evergreen)
+  const initDynamicDateEngine = () => {
+    const now = new Date();
+    const currentYear = now.getFullYear();
+    const currentMonth = now.getMonth(); // 0 = Jan, 9 = Oct, 10 = Nov, 11 = Dec
+
+    // In Q4 (Oct, Nov, Dec), roll over to dual edition: "2026–2027 Edition"
+    // In Q1–Q3 (Jan–Sep), roll over to single active year: "2027 Edition"
+    const editionText = currentMonth >= 9 
+      ? `${currentYear}–${currentYear + 1} Edition` 
+      : `${currentYear} Edition`;
+
+    const monthNames = [
+      'January', 'February', 'March', 'April', 'May', 'June',
+      'July', 'August', 'September', 'October', 'November', 'December'
+    ];
+    const updatedDateString = `${monthNames[currentMonth]} ${currentYear}`;
+
+    // Inject into .dynamic-edition elements (header badge, hero badges)
+    document.querySelectorAll('.dynamic-edition').forEach((el) => {
+      el.textContent = editionText;
+    });
+
+    // Inject into .dynamic-year elements (copyright footer, general references)
+    document.querySelectorAll('.dynamic-year').forEach((el) => {
+      el.textContent = currentYear.toString();
+    });
+
+    // Inject into .dynamic-next-year elements
+    document.querySelectorAll('.dynamic-next-year').forEach((el) => {
+      el.textContent = (currentYear + 1).toString();
+    });
+
+    // Inject into .dynamic-updated-date elements (E-E-A-T author box "Last Updated: Month Year")
+    document.querySelectorAll('.dynamic-updated-date').forEach((el) => {
+      el.textContent = updatedDateString;
+    });
+
+    // Automatically update copyright footer text if present
+    document.querySelectorAll('.copyright-year').forEach((el) => {
+      el.textContent = currentYear.toString();
+    });
+
+    // Auto-update document.title dynamically in Q4 / new years
+    if (document.title && document.title.includes('2026')) {
+      const yearReplacement = currentMonth >= 9 
+        ? `${currentYear}–${currentYear + 1}` 
+        : currentYear.toString();
+      document.title = document.title.replace(/\b2026\b/g, yearReplacement);
+    }
+  };
+
+  // 3. Mobile Nav Toggle
   const initMobileNav = () => {
     const navToggles = document.querySelectorAll('.mobile-nav-toggle');
     const navMenus = document.querySelectorAll('.nav-menu');
@@ -39,7 +93,7 @@
     });
   };
 
-  // 3. Business Model Quiz Data & Interactive Filtering
+  // 4. Business Model Quiz Data & Interactive Filtering (Evergreen URLs)
   const businessModels = [
     {
       id: 'dropshipping',
@@ -52,7 +106,7 @@
       incomeLabel: '$3,000–$12,000/mo',
       conversion: '3.2%–5.0% Conversion Rate',
       aov: '$35–$59 US AOV',
-      link: '/ai-dropshipping-guide-2026.html',
+      link: '/ai-dropshipping-guide.html',
       description: 'Algorithmic product testing using TikTok Shop and automated Shopify fulfillment without holding physical inventory.'
     },
     {
@@ -137,7 +191,7 @@
       conversion: '68% AdSense Rev Share',
       aov: '$30–$75 Mediavine RPM',
       link: '/niche-blogging.html',
-      description: 'Authority editorial portals optimized for 2026 Generative Engine Optimization (GEO) and display monetization.'
+      description: 'Authority editorial portals optimized for Generative Engine Optimization (GEO) and display monetization.'
     },
     {
       id: 'ugc',
@@ -203,7 +257,7 @@
         quizContainer.innerHTML = `
           <div style="grid-column: 1/-1; text-align: center; padding: 2rem; background: var(--bg-card); border-radius: 8px; border: 1px dashed var(--border-color);">
             <p style="font-weight: 600; color: var(--text-primary); margin-bottom: 0.5rem;">No exact match for this precise combination.</p>
-            <p style="color: var(--text-muted); font-size: 0.9rem;">Try broadening your budget or hours selection to explore related 2026 models.</p>
+            <p style="color: var(--text-muted); font-size: 0.9rem;">Try broadening your budget or hours selection to explore related models.</p>
           </div>
         `;
         return;
@@ -232,7 +286,7 @@
               <div><strong>Key Metric:</strong> ${item.conversion}</div>
             </div>
             <a href="${item.link}" style="display: inline-block; font-size: 0.875rem; font-weight: 600; color: var(--accent-primary); text-decoration: none;">
-              Read Full 2026 Blueprint &rarr;
+              Read Full Blueprint &rarr;
             </a>
           </div>
         `;
@@ -270,7 +324,7 @@
     renderResults();
   };
 
-  // 4. FAQ Accordion Toggle
+  // 5. FAQ Accordion Toggle
   const initFAQ = () => {
     const faqButtons = document.querySelectorAll('.faq-question');
     faqButtons.forEach((btn) => {
@@ -292,6 +346,7 @@
   // Run on DOM Ready
   document.addEventListener('DOMContentLoaded', () => {
     initTheme();
+    initDynamicDateEngine();
     initMobileNav();
     initQuiz();
     initFAQ();
