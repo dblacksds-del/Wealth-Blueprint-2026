@@ -74,3 +74,6 @@ Thumbs.db
 tmp/
 .vercel/
 .netlify/
+
+# Private deliverables (Paid digital products)
+private_deliverables/
