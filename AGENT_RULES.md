@@ -32,9 +32,9 @@ All content, code, and pages generated in this repository must strictly adhere t
 Every guide and article must feature the exact verified honest byline:
 ```html
 <div class="author-eeat-box">
-  <div class="author-avatar-badge">DS</div>
+  <div class="author-avatar-badge">LS</div>
   <div>
-    <div style="font-weight: 700; color: var(--text-primary); font-size: 1rem;">Written by Dhanushka Lakshan Senanayake, with AI assistance.</div>
+    <div style="font-weight: 700; color: var(--text-primary); font-size: 1rem;">Written by Liam Senanayake.</div>
     <div style="font-size: 0.85rem; color: var(--text-muted);">Reviewed <span class="dynamic-updated-date">October 2026</span></div>
   </div>
 </div>
