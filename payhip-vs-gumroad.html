@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payhip vs Gumroad Fees: Which Is Better for Beginners?</title>
+  <meta name="description" content="Compare Payhip and Gumroad fees for selling digital products. Complete breakdown of platform cuts, global sales tax, payouts, and math crossover.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://wealthblueprinthub.com/payhip-vs-gumroad.html" />
+
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6393855348717102" crossorigin="anonymous"></script>
+
+  <!-- OpenGraph & Twitter Cards -->
+  <meta property="og:title" content="Payhip vs Gumroad Fees: Which Is Better for Beginners?">
+  <meta property="og:description" content="Compare Payhip and Gumroad fees for selling digital products. Complete breakdown of platform cuts, global sales tax, payouts, and math crossover.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://wealthblueprinthub.com/payhip-vs-gumroad.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Payhip vs Gumroad Fees: Which Is Better for Beginners?">
+  <meta name="twitter:description" content="Compare Payhip and Gumroad fees for selling digital products. Complete breakdown of platform cuts, global sales tax, payouts, and math crossover.">
+
+  <!-- Favicon & Touch Icons -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+  <link rel="stylesheet" href="/css/styles.css">
+
+  <!-- JSON-LD Schema: Article & FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "@id": "https://wealthblueprinthub.com/payhip-vs-gumroad.html#article",
+        "headline": "Payhip vs Gumroad Fees: Which Is Better for Beginners?",
+        "description": "An objective fee and feature comparison between Payhip and Gumroad, breaking down Merchant of Record tax handling, payout schedules, and unit profit math.",
+        "author": {
+          "@type": "Person",
+          "name": "Liam Senanayake",
+          "url": "https://wealthblueprinthub.com/about.html"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Wealth Blueprint",
+          "url": "https://wealthblueprinthub.com/"
+        },
+        "datePublished": "2026-10-15",
+        "dateModified": "2026-10-15"
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://wealthblueprinthub.com/payhip-vs-gumroad.html#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Is Payhip cheaper than Gumroad for selling digital downloads?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, for direct sales driven by your own marketing, Payhip Free is significantly cheaper than Gumroad. On Payhip Free, you pay a 5% platform fee plus payment processing (~2.9% + $0.30). On Gumroad, you pay a 10% platform fee plus a $0.50 fixed charge per sale, plus card processing. On a $10 sale, you keep approximately $8.91 on Payhip versus $7.91 on Gumroad."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is a Merchant of Record and why does Gumroad use it?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A Merchant of Record (MoR) is the legal entity that sells the product to the end consumer. Gumroad operates as a full Merchant of Record, meaning Gumroad calculates, collects, and legally remits sales tax and VAT across 100+ jurisdictions worldwide. On Payhip, you are the merchant, although Payhip automatically handles EU and UK digital VAT on your behalf."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "At what monthly sales revenue does Payhip Plus become cheaper than Payhip Free?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Payhip Plus costs $29 per month and drops the transaction fee from 5% to 2% (a 3% savings). The exact mathematical crossover point is $966.67 in monthly gross sales ($29 divided by 0.03). Once your shop consistently earns more than $967 per month, upgrading to Payhip Plus saves you money."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How quickly do Payhip and Gumroad pay out earnings to your bank account?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Payhip deposits funds instantly into your connected Stripe or PayPal account as each customer purchase completes. Gumroad holds funds and pays out on a weekly schedule (every Friday) to your bank account or PayPal, subject to a brief initial holding period for fraud screening."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can you host video courses on Payhip and Gumroad for free?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Payhip includes a dedicated video course builder with student accounts and progress tracking on its free plan (subject to standard transaction fees). Gumroad also allows video course hosting through streaming or downloadable files on its free plan."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Shared Header -->
+  <header class="site-header">
+    <div class="header-inner container">
+      <a href="/" class="brand-logo">
+        <svg class="brand-icon" width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect width="32" height="32" rx="7" fill="#1e40af"/>
+          <path d="M16 6.5L24 23.5H8L16 6.5Z" stroke="#ffffff" stroke-width="2.5" stroke-linejoin="round"/>
+          <path d="M11 18.5H21" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+          <path d="M16 10L16 23.5" stroke="#10b981" stroke-width="2.2" stroke-linecap="round"/>
+          <circle cx="16" cy="6.5" r="2.25" fill="#10b981"/>
+        </svg>
+        <span class="logo-text">WealthBlueprint <span class="logo-badge dynamic-edition">2026–2027 Edition</span></span>
+      </a>
+      <nav class="nav-menu">
+        <a href="/" class="nav-link">Home</a>
+        <a href="/start-here.html" class="nav-link">Start Here</a>
+        <a href="/guide-book.html" class="nav-link">Guide Book</a>
+        <a href="/about.html" class="nav-link">About</a>
+        <button class="theme-toggle-btn" type="button" aria-label="Toggle theme">🌙 Dark</button>
+      </nav>
+      <button class="mobile-nav-toggle" type="button" aria-label="Toggle navigation">☰</button>
+    </div>
+  </header>
+
+  <!-- PASTE ADSENSE AD UNIT CODE HERE -->
+
+  <main class="container" style="padding-top: 1.5rem; padding-bottom: 3rem;">
+    <!-- Breadcrumb -->
+    <nav aria-label="Breadcrumb" style="font-size: 0.875rem; color: var(--text-muted); margin-bottom: 1.25rem;">
+      <a href="/" style="color: var(--accent-primary); text-decoration: none;">Home</a> &gt; 
+      <a href="/digital-products.html" style="color: var(--accent-primary); text-decoration: none;">Digital Products</a> &gt; 
+      <span>Payhip vs Gumroad</span>
+    </nav>
+
+    <article>
+      <h1 style="font-size: clamp(1.85rem, 3.5vw, 2.5rem); line-height: 1.25; margin-bottom: 1rem; color: var(--text-primary);">
+        Payhip vs Gumroad Fees: Which Is Better for Beginners?
+      </h1>
+
+      <p style="font-size: 1.15rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 1.5rem;">
+        Payhip and Gumroad are checkout platforms that let you sell downloadable files, templates, and courses with zero upfront hosting cost. However, they charge very different fees and handle global sales taxes differently.
+      </p>
+
+      <!-- Author EEAT Box -->
+      <div class="author-eeat-box" style="margin: 1.5rem 0 2rem;">
+        <div class="author-avatar-badge">LS</div>
+        <div>
+          <div style="font-weight: 700; color: var(--text-primary); font-size: 0.95rem;">
+            Written by Liam Senanayake. Reviewed <span class="dynamic-updated-date">October 2026</span>.
+          </div>
+          <div style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.2rem;">
+            Practical digital venture education with realistic expectations and zero false promises.
+          </div>
+        </div>
+      </div>
+
+      <!-- PASTE ADSENSE AD UNIT CODE HERE -->
+
+      <!-- Summary Scorecard -->
+      <section class="guide-summary-box">
+        <h2 style="font-size: 1.35rem; color: var(--text-primary); margin-bottom: 0.5rem;">Direct Feature &amp; Fee Comparison</h2>
+        <p style="font-size: 0.95rem; color: var(--text-secondary); margin-bottom: 1rem;">
+          How Payhip and Gumroad stack up for a beginner launching their first digital product:
+        </p>
+        
+        <div class="summary-grid">
+          <div class="summary-item">
+            <div class="summary-item-label">Payhip Free Plan</div>
+            <div class="summary-item-val">5% + Processing</div>
+            <div style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.25rem;">Keeps ~$8.91 on a $10 sale.</div>
+          </div>
+          <div class="summary-item">
+            <div class="summary-item-label">Gumroad Direct</div>
+            <div class="summary-item-val">10% + $0.50 + Proc.</div>
+            <div style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.25rem;">Keeps ~$7.91 on a $10 sale.</div>
+          </div>
+          <div class="summary-item">
+            <div class="summary-item-label">Tax Compliance</div>
+            <div class="summary-item-val">Gumroad is Full MoR</div>
+            <div style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.25rem;">Gumroad remits global taxes automatically.</div>
+          </div>
+          <div class="summary-item">
+            <div class="summary-item-label">Payout Timing</div>
+            <div class="summary-item-val">Instant (Payhip) vs Weekly</div>
+            <div style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.25rem;">Payhip pays immediately to Stripe/PayPal.</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Custom Inline SVG Workflow Diagram -->
+      <section style="margin: 2.5rem 0;">
+        <h2 style="font-size: 1.35rem; color: var(--text-primary); margin-bottom: 0.5rem; text-align: center;">
+          Net Payout Comparison on a $10 Digital Sale
+        </h2>
+        <p style="font-size: 0.92rem; color: var(--text-secondary); text-align: center; max-width: 620px; margin: 0 auto 1.25rem;">
+          How platform cuts and card fees impact your actual take-home cash across Payhip, Gumroad, and direct Stripe.
+        </p>
+
+        <div style="background-color: var(--bg-card); border: 1px solid var(--border-color); border-radius: 12px; padding: 1.5rem; overflow-x: auto; text-align: center;">
+          <svg viewBox="0 0 760 180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Payhip vs Gumroad Fee Comparison Diagram" style="max-width: 100%; height: auto; font-family: system-ui, -apple-system, sans-serif;">
+            <!-- Column 1: Payhip Free -->
+            <rect x="30" y="25" width="210" height="135" rx="8" fill="#ecfdf5" stroke="#10b981" stroke-width="2"/>
+            <text x="135" y="52" text-anchor="middle" font-size="13" font-weight="700" fill="#065f46">PAYHIP FREE TIER</text>
+            <text x="135" y="82" text-anchor="middle" font-size="24" font-weight="800" fill="#047857">$8.91 NET</text>
+            <text x="135" y="105" text-anchor="middle" font-size="12" font-weight="600" fill="#065f46">89.1% Take-Home</text>
+            <text x="135" y="128" text-anchor="middle" font-size="11" fill="#047857">5% Fee ($0.50) + Stripe ($0.59)</text>
+            <text x="135" y="145" text-anchor="middle" font-size="10" font-weight="600" fill="#059669">Instant Direct Deposit</text>
+
+            <!-- Column 2: Gumroad Direct -->
+            <rect x="275" y="25" width="210" height="135" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"/>
+            <text x="380" y="52" text-anchor="middle" font-size="13" font-weight="700" fill="#334155">GUMROAD DIRECT</text>
+            <text x="380" y="82" text-anchor="middle" font-size="24" font-weight="800" fill="#0f172a">$7.91 NET</text>
+            <text x="380" y="105" text-anchor="middle" font-size="12" font-weight="600" fill="#475569">79.1% Take-Home</text>
+            <text x="380" y="128" text-anchor="middle" font-size="11" fill="#64748b">10% + $0.50 ($1.50) + Card ($0.59)</text>
+            <text x="380" y="145" text-anchor="middle" font-size="10" font-weight="600" fill="#64748b">Full MoR Global Tax Remittance</text>
+
+            <!-- Column 3: Gumroad Discover -->
+            <rect x="520" y="25" width="210" height="135" rx="8" fill="#fef2f2" stroke="#f87171" stroke-width="2"/>
+            <text x="625" y="52" text-anchor="middle" font-size="13" font-weight="700" fill="#991b1b">GUMROAD DISCOVER</text>
+            <text x="625" y="82" text-anchor="middle" font-size="24" font-weight="800" fill="#b91c1c">$7.00 NET</text>
+            <text x="625" y="105" text-anchor="middle" font-size="12" font-weight="600" fill="#991b1b">70.0% Take-Home</text>
+            <text x="625" y="128" text-anchor="middle" font-size="11" fill="#7f1d1d">30% Flat Platform Take</text>
+            <text x="625" y="145" text-anchor="middle" font-size="10" font-weight="600" fill="#b91c1c">When Gumroad Finds the Buyer</text>
+          </svg>
+        </div>
+      </section>
+
+      <!-- Section: Detailed Breakdown of Fees -->
+      <section style="margin: 2.5rem 0;">
+        <h2 style="font-size: 1.45rem; color: var(--text-primary); margin-bottom: 0.75rem;">
+          Detailed Platform Fee Breakdown: Payhip vs Gumroad
+        </h2>
+        <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 1rem;">
+          Both platforms allow you to create an account, upload files, and connect a payment gateway without paying a monthly subscription fee. However, how they deduct transaction fees from your customer payments differs substantially:
+        </p>
+
+        <div style="background-color: var(--bg-card); border: 1px solid var(--border-color); border-radius: 10px; overflow-x: auto; margin-bottom: 1.5rem;">
+          <table style="width: 100%; border-collapse: collapse; font-size: 0.92rem; text-align: left;">
+            <thead>
+              <tr style="background-color: var(--bg-secondary); border-bottom: 2px solid var(--border-color);">
+                <th style="padding: 0.85rem 1rem; color: var(--text-primary);">Plan &amp; Tier</th>
+                <th style="padding: 0.85rem 1rem; color: var(--text-primary);">Monthly Subscription</th>
+                <th style="padding: 0.85rem 1rem; color: var(--text-primary);">Platform Transaction Cut</th>
+                <th style="padding: 0.85rem 1rem; color: var(--text-primary);">Payment Processing</th>
+                <th style="padding: 0.85rem 1rem; color: var(--text-primary);">Net on $10 Sale</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom: 1px solid var(--border-color);">
+                <td style="padding: 0.75rem 1rem;"><strong>Payhip Free</strong></td>
+                <td style="padding: 0.75rem 1rem;">$0 / month</td>
+                <td style="padding: 0.75rem 1rem;">5% per sale</td>
+                <td style="padding: 0.75rem 1rem;">~2.9% + $0.30 (Stripe/PayPal)</td>
+                <td style="padding: 0.75rem 1rem; font-weight: 700; color: #047857;">$8.91 (89.1%)</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--border-color);">
+                <td style="padding: 0.75rem 1rem;"><strong>Payhip Plus</strong></td>
+                <td style="padding: 0.75rem 1rem;">$29 / month</td>
+                <td style="padding: 0.75rem 1rem;">2% per sale</td>
+                <td style="padding: 0.75rem 1rem;">~2.9% + $0.30 (Stripe/PayPal)</td>
+                <td style="padding: 0.75rem 1rem; font-weight: 700; color: #047857;">$9.21 (before $29 fee)</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--border-color);">
+                <td style="padding: 0.75rem 1rem;"><strong>Payhip Pro</strong></td>
+                <td style="padding: 0.75rem 1rem;">$99 / month</td>
+                <td style="padding: 0.75rem 1rem;">0% per sale</td>
+                <td style="padding: 0.75rem 1rem;">~2.9% + $0.30 (Stripe/PayPal)</td>
+                <td style="padding: 0.75rem 1rem; font-weight: 700; color: #047857;">$9.41 (before $99 fee)</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--border-color);">
+                <td style="padding: 0.75rem 1rem;"><strong>Gumroad Direct</strong></td>
+                <td style="padding: 0.75rem 1rem;">$0 / month</td>
+                <td style="padding: 0.75rem 1rem;">10% + $0.50 per sale</td>
+                <td style="padding: 0.75rem 1rem;">~2.9% + $0.30 (Included/Standard)</td>
+                <td style="padding: 0.75rem 1rem; font-weight: 700; color: #334155;">$7.91 (79.1%)</td>
+              </tr>
+              <tr style="background-color: #fef2f2;">
+                <td style="padding: 0.75rem 1rem;"><strong>Gumroad Discover</strong></td>
+                <td style="padding: 0.75rem 1rem;">$0 / month</td>
+                <td style="padding: 0.75rem 1rem;">30% flat fee</td>
+                <td style="padding: 0.75rem 1rem;">Included in flat fee</td>
+                <td style="padding: 0.75rem 1rem; font-weight: 700; color: #b91c1c;">$7.00 (70.0%)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Section: The Mathematical Crossover Points -->
+      <section style="margin: 2.5rem 0;">
+        <h2 style="font-size: 1.45rem; color: var(--text-primary); margin-bottom: 0.75rem;">
+          The Mathematical Crossover Points: When to Upgrade
+        </h2>
+        <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 1rem;">
+          Upgrading to a paid monthly plan before your store produces consistent revenue wastes capital. You can calculate the exact break-even point where paying a fixed monthly fee saves you more money than paying per-transaction cuts:
+        </p>
+
+        <div class="card" style="margin-bottom: 1.25rem;">
+          <h3 style="font-size: 1.1rem; color: var(--accent-primary); margin-top: 0; margin-bottom: 0.35rem;">
+            Payhip Free to Payhip Plus Crossover Math: $966.67 / Month
+          </h3>
+          <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 0.5rem;">
+            Payhip Plus costs <strong>$29.00 USD per month</strong>. It reduces the transaction fee from 5% to 2%, giving you a <strong>3% fee reduction</strong> (0.03).
+          </p>
+          <p style="font-size: 0.92rem; font-family: monospace; background: var(--bg-main); padding: 0.5rem 0.75rem; border-radius: 4px; border: 1px solid var(--border-color); margin-bottom: 0.5rem;">
+            Break-Even Point = $29.00 ÷ 0.03 = $966.67 USD Gross Sales
+          </p>
+          <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 0;">
+            If your shop generates less than $967 in monthly sales, staying on Payhip Free is cheaper. Once your sales exceed $967/month, Payhip Plus saves you money.
+          </p>
+        </div>
+
+        <div class="card" style="margin-bottom: 1.5rem;">
+          <h3 style="font-size: 1.1rem; color: var(--accent-primary); margin-top: 0; margin-bottom: 0.35rem;">
+            Payhip Plus to Payhip Pro Crossover Math: $3,500.00 / Month
+          </h3>
+          <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 0.5rem;">
+            Payhip Pro costs <strong>$99.00 USD per month</strong> ($70 more than Plus). It drops the fee from 2% to 0%, saving 2% (0.02).
+          </p>
+          <p style="font-size: 0.92rem; font-family: monospace; background: var(--bg-main); padding: 0.5rem 0.75rem; border-radius: 4px; border: 1px solid var(--border-color); margin-bottom: 0.5rem;">
+            Break-Even Point = $70.00 ÷ 0.02 = $3,500.00 USD Gross Sales
+          </p>
+          <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 0;">
+            Only consider Payhip Pro once your digital storefront is earning over $3,500 in consistent monthly revenue.
+          </p>
+        </div>
+      </section>
+
+      <!-- Section: Merchant of Record vs Payment Gateway -->
+      <section style="margin: 2.5rem 0;">
+        <h2 style="font-size: 1.45rem; color: var(--text-primary); margin-bottom: 0.75rem;">
+          Merchant of Record (MoR) vs. Direct Gateway: The Tax Difference
+        </h2>
+        <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 1rem;">
+          The biggest operational difference between Gumroad and Payhip is who acts as the legal merchant when an international customer buys your digital download:
+        </p>
+
+        <div style="display: grid; gap: 1.25rem; margin-bottom: 1.5rem;">
+          <div style="background-color: var(--bg-card); border-left: 4px solid var(--accent-primary); border-radius: 8px; padding: 1.25rem; border: 1px solid var(--border-color); border-left-width: 4px;">
+            <strong style="color: var(--text-primary); font-size: 1.05rem;">How Gumroad Operates as a Full Merchant of Record:</strong>
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6; margin: 0.35rem 0 0;">
+              When a buyer in Germany, the UK, or California purchases from Gumroad, Gumroad legally sells the item and issues the invoice under Gumroad's business entity. Gumroad calculates the exact local sales tax or VAT, collects it from the customer, files tax returns, and remits the money directly to international tax authorities. For creators who want zero tax paperwork headaches, this is a major advantage.
+            </p>
+          </div>
+
+          <div style="background-color: var(--bg-card); border-left: 4px solid #10b981; border-radius: 8px; padding: 1.25rem; border: 1px solid var(--border-color); border-left-width: 4px;">
+            <strong style="color: var(--text-primary); font-size: 1.05rem;">How Payhip Handles Digital VAT and Direct Gateways:</strong>
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6; margin: 0.35rem 0 0;">
+              On Payhip, customer payments deposit directly into your personal or business Stripe / PayPal account. Payhip automatically adds and collects European Union (EU) and United Kingdom (UK) digital VAT at checkout, and generates detailed periodic tax reports. However, because you are the merchant of record on Stripe, you are responsible for monitoring local state tax thresholds if you exceed sales nexus limits.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section: 3-Tier Price Comparison ($9, $19, $39) -->
+      <section style="margin: 2.5rem 0;">
+        <h2 style="font-size: 1.45rem; color: var(--text-primary); margin-bottom: 0.75rem;">
+          Take-Home Cash Across Popular Price Points ($9, $19, $39)
+        </h2>
+        <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 1.25rem;">
+          To understand how platform cuts scale as you raise prices, compare net take-home earnings across the three most common digital product price tiers:
+        </p>
+
+        <div style="background-color: var(--bg-card); border: 1px solid var(--border-color); border-radius: 10px; overflow-x: auto; margin-bottom: 1.5rem;">
+          <table style="width: 100%; border-collapse: collapse; font-size: 0.92rem; text-align: left;">
+            <thead>
+              <tr style="background-color: var(--bg-secondary); border-bottom: 2px solid var(--border-color);">
+                <th style="padding: 0.85rem 1rem; color: var(--text-primary);">Retail Price Point</th>
+                <th style="padding: 0.85rem 1rem; color: var(--text-primary);">Payhip Free (5% + Stripe)</th>
+                <th style="padding: 0.85rem 1rem; color: var(--text-primary);">Gumroad Direct (10% + $0.50)</th>
+                <th style="padding: 0.85rem 1rem; color: var(--text-primary);">Payhip Advantage</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom: 1px solid var(--border-color);">
+                <td style="padding: 0.75rem 1rem;"><strong>$9.00 USD (Starter Guide / Checklist)</strong></td>
+                <td style="padding: 0.75rem 1rem; font-weight: 700; color: #047857;">$7.99 Net (88.8%)</td>
+                <td style="padding: 0.75rem 1rem; font-weight: 700; color: #334155;">$7.04 Net (78.2%)</td>
+                <td style="padding: 0.75rem 1rem; color: #047857; font-weight: 600;">+$0.95 per sale (+13.5%)</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--border-color);">
+                <td style="padding: 0.75rem 1rem;"><strong>$19.00 USD (Spreadsheet / Notion Hub)</strong></td>
+                <td style="padding: 0.75rem 1rem; font-weight: 700; color: #047857;">$17.20 Net (90.5%)</td>
+                <td style="padding: 0.75rem 1rem; font-weight: 700; color: #334155;">$15.75 Net (82.9%)</td>
+                <td style="padding: 0.75rem 1rem; color: #047857; font-weight: 600;">+$1.45 per sale (+9.2%)</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--border-color);">
+                <td style="padding: 0.75rem 1rem;"><strong>$39.00 USD (Mini-Course / Workshop)</strong></td>
+                <td style="padding: 0.75rem 1rem; font-weight: 700; color: #047857;">$35.62 Net (91.3%)</td>
+                <td style="padding: 0.75rem 1rem; font-weight: 700; color: #334155;">$33.17 Net (85.1%)</td>
+                <td style="padding: 0.75rem 1rem; color: #047857; font-weight: 600;">+$2.45 per sale (+7.4%)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6;">
+          <em>Unit math assumptions: US domestic card processing of 2.9% + $0.30 USD. Gumroad processing included. Figures rounded to nearest cent.</em>
+        </p>
+      </section>
+
+      <!-- Section: How to Deliver Templates Safely -->
+      <section style="margin: 2.5rem 0;">
+        <h2 style="font-size: 1.45rem; color: var(--text-primary); margin-bottom: 0.75rem;">
+          How to Deliver Google Sheets &amp; Canva Templates Safely
+        </h2>
+        <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 1rem;">
+          Regardless of whether you choose Payhip or Gumroad, never upload raw editable template links directly into customer confirmation screens. Follow this safe delivery architecture:
+        </p>
+        <ol style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.8; padding-left: 1.25rem; margin-bottom: 1.25rem;">
+          <li><strong>The Google Sheet Copy Link Trick:</strong> If selling a Google Sheet tracker, never give buyers an <em>"Anyone with link can edit"</em> link. If you do, the first buyer who types data will overwrite your master file for all future buyers! Instead, take your shared view link and replace <code>/edit</code> at the very end of the URL with <code>/copy</code>. When the buyer clicks it, Google automatically opens a page asking: <em>"Would you like to make a copy of [Template Name]?"</em> and saves a private copy directly into their personal Google Drive.</li>
+          <li><strong>The 1-Page PDF Delivery Document:</strong> In free Canva, create a clean 1-page PDF titled <em>"Access Your [Product Name] Purchase"</em>. Include a prominent clickable button linking to your <code>/copy</code> URL, 3 bullet points explaining how to use it, and your support email (<a href="mailto:contact@wealthblueprinthub.com" style="color: var(--accent-primary); font-weight: 600;">contact@wealthblueprinthub.com</a>).</li>
+          <li><strong>Upload the PDF as the Primary Product File:</strong> In your Payhip or Gumroad product dashboard, upload that 1-page PDF. When a customer purchases, the platform delivers the PDF instantly, giving the customer a permanent file on their computer and preventing link tampering.</li>
+          <li><strong>Test in an Incognito Browser Window:</strong> Always test your PDF and copy links in an incognito/private browser window where you are not logged into your Google account. Confirm the template opens cleanly without asking for permission.</li>
+        </ol>
+      </section>
+
+      <!-- Section: Day 1 Decision Framework -->
+      <section style="margin: 2.5rem 0;">
+        <h2 style="font-size: 1.45rem; color: var(--text-primary); margin-bottom: 0.75rem;">
+          Day 1 Decision Framework: Which Platform Should You Choose?
+        </h2>
+        <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 1rem;">
+          Use this simple decision rule based on your setup:
+        </p>
+
+        <div class="card-emerald" style="margin-bottom: 1.25rem;">
+          <h3 style="font-size: 1.1rem; margin-top: 0; color: #065f46;">Pick Payhip Free (5%) If:</h3>
+          <ul style="font-size: 0.92rem; line-height: 1.7; color: var(--text-secondary); margin-bottom: 0; padding-left: 1.25rem;">
+            <li>You already have a verified Stripe or PayPal Business account in the US, UK, or Canada.</li>
+            <li>You want to maximize your net take-home cash and keep an extra ~$1.00 per $10 transaction.</li>
+            <li>You prefer immediate direct deposits into your bank rather than waiting for weekly payout cycles.</li>
+            <li>You plan to offer a multi-module online video course with student login tracking.</li>
+          </ul>
+        </div>
+
+        <div class="card" style="margin-bottom: 1.5rem;">
+          <h3 style="font-size: 1.1rem; margin-top: 0; color: var(--text-primary);">Pick Gumroad Direct (10% + $0.50) If:</h3>
+          <ul style="font-size: 0.92rem; line-height: 1.7; color: var(--text-secondary); margin-bottom: 0; padding-left: 1.25rem;">
+            <li>You live in a country where Stripe is not supported, or you do not want to manage individual Stripe webhooks.</li>
+            <li>You want one single platform to act as the legal Merchant of Record and handle 100% of global sales tax filings.</li>
+            <li>You want your product indexed in Gumroad's searchable Discover catalog for potential organic marketplace discovery.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Guide Book Callout Card -->
+      <section class="guide-book-callout" style="background: linear-gradient(135deg, var(--bg-card), var(--bg-secondary)); border: 2px solid var(--accent-primary); border-radius: 12px; padding: 2rem; margin: 3rem 0; text-align: center;">
+        <span style="display: inline-block; background-color: var(--accent-primary); color: #ffffff; font-size: 0.8rem; font-weight: 700; padding: 0.25rem 0.75rem; border-radius: 4px; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.75rem;">Printable Ledger Sheets</span>
+        <h2 style="font-size: 1.55rem; color: var(--text-primary); margin-bottom: 0.5rem;">
+          Digital Product Net Margin Ledger ($9.99 USD)
+        </h2>
+        <p style="font-size: 0.95rem; color: var(--text-secondary); max-width: 620px; margin: 0 auto 1.5rem; line-height: 1.6;">
+          Want our pre-formatted 8.5×11" printable digital margin table comparing Payhip, Gumroad, and direct Stripe checkouts across $9, $19, and $39 price tiers? Page 23 of our 26-page offline handbook gives you the exact formula breakdown.
+        </p>
+        <a href="/guide-book.html" class="btn btn-primary" style="display: inline-block; padding: 0.85rem 2rem; font-size: 1.05rem; font-weight: 700; text-decoration: none; border-radius: 8px;">
+          Get the 26-Page Guide Book ($9.99 USD) &rarr;
+        </a>
+        <span style="display: block; font-size: 0.8rem; color: var(--text-muted); margin-top: 0.75rem;">
+          Instant offline PDF download • Final sale digital deliverable • Secure 256-bit checkout
+        </span>
+      </section>
+
+      <!-- Email Checklist Form -->
+      <div class="newsletter-box">
+        <span style="display: inline-block; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--accent-primary); margin-bottom: 0.5rem;">Free Action Guide</span>
+        <h2 style="font-size: 1.5rem; color: var(--text-primary); margin-bottom: 0.5rem;">Download the Digital Product Blueprint Checklist</h2>
+        <p style="color: var(--text-secondary); max-width: 580px; margin: 0 auto; font-size: 0.95rem; line-height: 1.6;">
+          Includes step-by-step instructions to protect Google Sheet template copy links and create clean Canva delivery PDFs.
+        </p>
+        <form class="newsletter-form" action="/starter-checklist.html" method="get">
+          <input type="email" name="email" class="newsletter-input" placeholder="Enter your email address..." required aria-label="Email address">
+          <button type="submit" class="newsletter-btn">Send Me the Checklist</button>
+        </form>
+        <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.75rem;">No spam ever. Unsubscribe with one click anytime.</p>
+      </div>
+
+      <!-- 5 Plain-Language FAQs -->
+      <section style="margin: 3.5rem 0 1rem;">
+        <h2 style="font-size: 1.5rem; color: var(--text-primary); margin-bottom: 0.5rem; text-align: center;">
+          Frequently Asked Questions About Payhip and Gumroad
+        </h2>
+        <p style="font-size: 0.95rem; color: var(--text-secondary); margin-bottom: 1.5rem; text-align: center;">
+          Straight answers to common questions about digital storefront costs and setups:
+        </p>
+
+        <div class="faq-container">
+          <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">
+              <span>Is Payhip cheaper than Gumroad for selling digital downloads?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer" style="display: none;">
+              <p>
+                Yes, for direct sales driven by your own marketing, Payhip Free is significantly cheaper than Gumroad. On Payhip Free, you pay a 5% platform fee plus payment processing (~2.9% + $0.30). On Gumroad, you pay a 10% platform fee plus a $0.50 fixed charge per sale, plus card processing. On a $10 sale, you keep approximately $8.91 on Payhip versus $7.91 on Gumroad.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">
+              <span>What is a Merchant of Record and why does Gumroad use it?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer" style="display: none;">
+              <p>
+                A Merchant of Record (MoR) is the legal entity that sells the product to the end consumer. Gumroad operates as a full Merchant of Record, meaning Gumroad calculates, collects, and legally remits sales tax and VAT across 100+ jurisdictions worldwide. On Payhip, you are the merchant, although Payhip automatically handles EU and UK digital VAT on your behalf.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">
+              <span>At what monthly sales revenue does Payhip Plus become cheaper than Payhip Free?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer" style="display: none;">
+              <p>
+                Payhip Plus costs $29 per month and drops the transaction fee from 5% to 2% (a 3% savings). The exact mathematical crossover point is $966.67 in monthly gross sales ($29 divided by 0.03). Once your shop consistently earns more than $967 per month, upgrading to Payhip Plus saves you money.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">
+              <span>How quickly do Payhip and Gumroad pay out earnings to your bank account?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer" style="display: none;">
+              <p>
+                Payhip deposits funds instantly into your connected Stripe or PayPal account as each customer purchase completes. Gumroad holds funds and pays out on a weekly schedule (every Friday) to your bank account or PayPal, subject to a brief initial holding period for fraud screening.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">
+              <span>Can you host video courses on Payhip and Gumroad for free?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer" style="display: none;">
+              <p>
+                Yes. Payhip includes a dedicated video course builder with student accounts and progress tracking on its free plan (subject to standard transaction fees). Gumroad also allows video course hosting through streaming or downloadable files on its free plan.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </article>
+  </main>
+
+  <!-- Shared Footer -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <div class="brand-logo">
+          <svg class="brand-icon" width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect width="32" height="32" rx="7" fill="#1e40af"/>
+            <path d="M16 6.5L24 23.5H8L16 6.5Z" stroke="#ffffff" stroke-width="2.5" stroke-linejoin="round"/>
+            <path d="M11 18.5H21" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+            <path d="M16 10L16 23.5" stroke="#10b981" stroke-width="2.2" stroke-linecap="round"/>
+            <circle cx="16" cy="6.5" r="2.25" fill="#10b981"/>
+          </svg>
+          <span class="logo-text">WealthBlueprint</span>
+        </div>
+        <p style="font-size: 0.9rem; color: var(--text-secondary); margin-top: 0.5rem; line-height: 1.6;">
+          Honest, practical guides to starting an online business with clear budgets and zero false promises.
+        </p>
+      </div>
+      <div class="footer-links-group">
+        <h4>Navigation</h4>
+        <div class="footer-links">
+          <a href="/">Home</a>
+          <a href="/start-here.html">Start Here</a>
+          <a href="/guide-book.html">Guide Book</a>
+          <a href="/about.html">About Liam</a>
+          <a href="/contact.html">Contact Us</a>
+        </div>
+      </div>
+      <div class="footer-links-group">
+        <h4>All 10 Blueprints</h4>
+        <div class="footer-links">
+          <a href="/freelancing.html">Freelancing ($0)</a>
+          <a href="/affiliate-marketing.html">Affiliate Marketing ($0)</a>
+          <a href="/ugc-social-media.html">UGC & Social Media ($0)</a>
+          <a href="/digital-products.html">Selling Digital Products</a>
+          <a href="/faceless-youtube.html">Faceless YouTube</a>
+          <a href="/online-courses.html">Online Tutoring</a>
+          <a href="/ai-automation-services.html">AI Automation Services</a>
+          <a href="/niche-blogging.html">Niche Blogging</a>
+          <a href="/print-on-demand.html">Print on Demand</a>
+          <a href="/ai-dropshipping-guide.html">E-Commerce Dropshipping</a>
+        </div>
+      </div>
+      <div class="footer-links-group">
+        <h4>Editorial & Legal</h4>
+        <div class="footer-links">
+          <a href="/privacy-policy.html">Privacy Policy</a>
+          <a href="/disclaimer.html">Earnings Disclaimer</a>
+          <a href="/contact.html">Support & Feedback</a>
+        </div>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; <span class="dynamic-year">2026</span> WealthBlueprint. All rights reserved. Published for educational purposes only.</p>
+    </div>
+  </footer>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>
