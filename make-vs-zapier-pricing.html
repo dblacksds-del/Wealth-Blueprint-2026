@@ -30,6 +30,9 @@
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 
+    <script>
+    (function(){try{var t=localStorage.getItem("wb_theme")||(window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light");document.documentElement.setAttribute("data-theme",t);}catch(e){}})();
+  </script>
   <link rel="stylesheet" href="/css/styles.css">
 
   <!-- JSON-LD Schema: Article, FAQPage, BreadcrumbList -->
@@ -459,7 +462,7 @@
         </ul>
 
         <div style="background-color: var(--bg-card); border-left: 4px solid var(--accent-primary); border: 1px solid var(--border-color); border-left-width: 4px; border-radius: 8px; padding: 1.25rem; margin-top: 1rem;">
-          <h4 style="font-size: 1rem; color: var(--text-primary); margin: 0 0 0.35rem;">The Professional Agency Protocol:</h4>
+          <h3 style="font-size: 1rem; color: var(--text-primary); margin: 0 0 0.35rem;">The Professional Agency Protocol:</h3>
           <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6; margin: 0;">
             Always instruct the client to create their own free account on Make.com or Zapier and enter their corporate billing information. Then, have them send an invite to your business email as an <em>Admin</em> or <em>Member</em>. You do all development work inside their sandbox. If their usage grows, their company card handles the upgrade smoothly.
           </p>
@@ -497,7 +500,7 @@
         </p>
 
         <div style="background-color: var(--bg-card); border-left: 4px solid var(--accent-primary); border: 1px solid var(--border-color); border-left-width: 4px; border-radius: 8px; padding: 1.25rem; margin-top: 1.5rem;">
-          <h4 style="font-size: 1rem; color: var(--text-primary); margin: 0 0 0.35rem;">Pitching Online Course Creators Too?</h4>
+          <h3 style="font-size: 1rem; color: var(--text-primary); margin: 0 0 0.35rem;">Pitching Online Course Creators Too?</h3>
           <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6; margin: 0;">
             Course creators and tutors also need automation to connect Stripe payments to private video portals. Read our complete guide on <a href="/how-to-price-online-course.html" style="color: var(--accent-primary); font-weight: 600;">How to Price an Online Course or Tutoring Service</a> to see how creators structure their software tech stacks.
           </p>
@@ -615,17 +618,17 @@
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem;">
           <a href="/ai-automation-services.html" style="background-color: var(--bg-card); border: 1px solid var(--border-color); border-radius: 8px; padding: 1rem; text-decoration: none; color: inherit; display: block;">
             <div style="font-size: 0.8rem; font-weight: 700; color: var(--accent-primary);">Parent Pillar Guide</div>
-            <h4 style="font-size: 1.05rem; margin: 0.25rem 0; color: var(--text-primary);">AI Automation Services</h4>
+            <h3 style="font-size: 1.05rem; margin: 0.25rem 0; color: var(--text-primary);">AI Automation Services</h3>
             <p style="font-size: 0.85rem; color: var(--text-secondary); margin: 0;">Full 10-step guide to finding local clients, building integrations, and managing handovers.</p>
           </a>
           <a href="/upwork-proposal-template.html" style="background-color: var(--bg-card); border: 1px solid var(--border-color); border-radius: 8px; padding: 1rem; text-decoration: none; color: inherit; display: block;">
             <div style="font-size: 0.8rem; font-weight: 700; color: var(--accent-primary);">Client Outreach</div>
-            <h4 style="font-size: 1.05rem; margin: 0.25rem 0; color: var(--text-primary);">Upwork Proposal Template</h4>
+            <h3 style="font-size: 1.05rem; margin: 0.25rem 0; color: var(--text-primary);">Upwork Proposal Template</h3>
             <p style="font-size: 0.85rem; color: var(--text-secondary); margin: 0;">How to bid on Zapier and Make automation jobs with sample proposal scripts.</p>
           </a>
           <a href="/how-to-price-online-course.html" style="background-color: var(--bg-card); border: 1px solid var(--border-color); border-radius: 8px; padding: 1rem; text-decoration: none; color: inherit; display: block;">
             <div style="font-size: 0.8rem; font-weight: 700; color: var(--accent-primary);">Pricing Strategy</div>
-            <h4 style="font-size: 1.05rem; margin: 0.25rem 0; color: var(--text-primary);">Online Course &amp; Tutoring Pricing</h4>
+            <h3 style="font-size: 1.05rem; margin: 0.25rem 0; color: var(--text-primary);">Online Course &amp; Tutoring Pricing</h3>
             <p style="font-size: 0.85rem; color: var(--text-secondary); margin: 0;">Learn how digital educators price live sessions and calculate net margins after software fees.</p>
           </a>
         </div>
@@ -653,7 +656,7 @@
         </p>
       </div>
       <div class="footer-links-group">
-        <h4>Navigation</h4>
+        <h3>Navigation</h3>
         <div class="footer-links">
           <a href="/">Home</a>
           <a href="/start-here.html">Start Here</a>
@@ -672,7 +675,7 @@
         </div>
       </div>
       <div class="footer-links-group">
-        <h4>Legal</h4>
+        <h3>Legal</h3>
         <div class="footer-links">
           <a href="/privacy-policy.html">Privacy Policy</a>
           <a href="/disclaimer.html">Disclaimer</a>
@@ -685,6 +688,6 @@
     </div>
   </footer>
 
-  <script src="/js/main.js"></script>
+  <script src="/js/main.js" defer></script>
 </body>
 </html>

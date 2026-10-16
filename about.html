@@ -30,6 +30,9 @@
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 
+    <script>
+    (function(){try{var t=localStorage.getItem("wb_theme")||(window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light");document.documentElement.setAttribute("data-theme",t);}catch(e){}})();
+  </script>
   <link rel="stylesheet" href="/css/styles.css">
 
   <!-- JSON-LD Schema: Organization & AboutPage -->
@@ -229,7 +232,7 @@
         </p>
       </div>
       <div class="footer-links-group">
-        <h4>Navigation</h4>
+        <h3>Navigation</h3>
         <div class="footer-links">
           <a href="/">Home</a>
           <a href="/start-here.html">Start Here</a>
@@ -239,7 +242,7 @@
         </div>
       </div>
       <div class="footer-links-group">
-        <h4>All 10 Blueprints</h4>
+        <h3>All 10 Blueprints</h3>
         <div class="footer-links">
           <a href="/freelancing.html">Freelancing ($0)</a>
           <a href="/affiliate-marketing.html">Affiliate Marketing ($0)</a>
@@ -254,7 +257,7 @@
         </div>
       </div>
       <div class="footer-links-group">
-        <h4>Editorial & Legal</h4>
+        <h3>Editorial & Legal</h3>
         <div class="footer-links">
           <a href="/privacy-policy.html">Privacy Policy</a>
           <a href="/disclaimer.html">Earnings Disclaimer</a>
@@ -267,6 +270,6 @@
     </div>
   </footer>
 
-  <script src="/js/main.js"></script>
+  <script src="/js/main.js" defer></script>
 </body>
 </html>

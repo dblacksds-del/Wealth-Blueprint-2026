@@ -1,6 +1,6 @@
 /* Wealth Blueprint 2026 - Global Core Stylesheet */
 :root {
-  --font-sans: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   --bg-primary: #ffffff;
   --bg-secondary: #f8fafc;
   --bg-card: #ffffff;
@@ -197,7 +197,11 @@ header.site-header {
   background-color: var(--bg-primary);
   border-bottom: 1px solid var(--border-color);
   backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   width: 100%;
+  height: 66px;
+  min-height: 66px;
+  box-sizing: border-box;
 }
 
 .header-container,
@@ -205,16 +209,19 @@ header.site-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  height: 66px;
+  min-height: 66px;
+  box-sizing: border-box;
 }
 
 .brand-logo {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 0.65rem;
   text-decoration: none;
   color: var(--text-primary);
+  height: 36px;
+  flex-shrink: 0;
 }
 
 .brand-icon {
@@ -222,6 +229,7 @@ header.site-header {
   flex-shrink: 0;
   width: 28px;
   height: 28px;
+  aspect-ratio: 1 / 1;
   vertical-align: middle;
   border-radius: 6px;
 }
@@ -235,6 +243,8 @@ header.site-header {
   align-items: center;
   gap: 0.5rem;
   letter-spacing: -0.01em;
+  white-space: nowrap;
+  line-height: 1.2;
 }
 
 .logo-badge {
@@ -245,6 +255,9 @@ header.site-header {
   padding: 0.15rem 0.45rem;
   border-radius: 4px;
   letter-spacing: normal;
+  white-space: nowrap;
+  display: inline-block;
+  line-height: 1.2;
 }
 
 /* Navigation Links */
@@ -253,6 +266,7 @@ header.site-header {
   align-items: center;
   gap: 1.5rem;
   list-style: none;
+  height: 36px;
 }
 
 .nav-link {
@@ -277,10 +291,16 @@ header.site-header {
   cursor: pointer;
   font-size: 0.875rem;
   font-weight: 600;
-  display: flex;
+  display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 0.4rem;
-  transition: all 0.15s ease;
+  min-width: 84px;
+  width: 84px;
+  height: 34px;
+  box-sizing: border-box;
+  text-align: center;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
 }
 
 .theme-toggle-btn:hover {
@@ -294,12 +314,27 @@ header.site-header {
   border: none;
   color: var(--text-primary);
   font-size: 1.5rem;
+  line-height: 1;
+  width: 36px;
+  height: 36px;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
+  padding: 0;
 }
 
 @media (max-width: 768px) {
+  header.site-header {
+    height: 64px;
+    min-height: 64px;
+  }
+  .header-container,
+  .header-inner {
+    height: 64px;
+    min-height: 64px;
+  }
   .mobile-nav-toggle {
-    display: block;
+    display: inline-flex;
   }
   .nav-menu {
     display: none;
@@ -307,6 +342,7 @@ header.site-header {
     top: 100%;
     left: 0;
     right: 0;
+    height: auto;
     background-color: var(--bg-primary);
     border-bottom: 1px solid var(--border-color);
     flex-direction: column;
@@ -319,12 +355,55 @@ header.site-header {
   }
 }
 
+@media (max-width: 480px) {
+  .logo-badge {
+    display: none;
+  }
+}
+
 /* Main Page Content & Spacing */
 main.container,
 .site-main {
   padding-top: 2rem;
   padding-bottom: 3.5rem;
   min-height: 70vh;
+}
+
+/* Hero Section */
+.hero-section {
+  min-height: 260px;
+  box-sizing: border-box;
+}
+
+/* Author Box */
+.author-eeat-box {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 1.25rem 1.5rem;
+  margin: 1.5rem 0 2rem;
+  min-height: 72px;
+  box-sizing: border-box;
+}
+
+.author-avatar-badge {
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  min-height: 44px;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  background-color: var(--accent-primary);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1rem;
+  flex-shrink: 0;
 }
 
 /* Footer */
@@ -347,7 +426,9 @@ footer.site-footer {
   max-width: 360px;
 }
 
+.footer-links-group h3,
 .footer-links-group h4,
+.footer-col h3,
 .footer-col h4 {
   font-size: 1rem;
   font-weight: 700;

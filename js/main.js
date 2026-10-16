@@ -9,21 +9,20 @@
 
   // 1. Theme Toggle (Dark / Light Mode)
   const initTheme = () => {
-    const savedTheme = localStorage.getItem('wb_theme');
-    const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-    const theme = savedTheme || (prefersDark ? 'dark' : 'light');
-    document.documentElement.setAttribute('data-theme', theme);
-
+    const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
     const toggleBtns = document.querySelectorAll('.theme-toggle-btn');
     toggleBtns.forEach((btn) => {
-      btn.innerHTML = theme === 'dark' ? '☀️ Light' : '🌙 Dark';
+      const label = currentTheme === 'dark' ? '☀️ Light' : '🌙 Dark';
+      if (btn.textContent.trim() !== label) {
+        btn.textContent = label;
+      }
       btn.addEventListener('click', () => {
-        const currentTheme = document.documentElement.getAttribute('data-theme');
-        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        const activeTheme = document.documentElement.getAttribute('data-theme') || 'light';
+        const newTheme = activeTheme === 'dark' ? 'light' : 'dark';
         document.documentElement.setAttribute('data-theme', newTheme);
-        localStorage.setItem('wb_theme', newTheme);
+        try { localStorage.setItem('wb_theme', newTheme); } catch (e) {}
         toggleBtns.forEach((b) => {
-          b.innerHTML = newTheme === 'dark' ? '☀️ Light' : '🌙 Dark';
+          b.textContent = newTheme === 'dark' ? '☀️ Light' : '🌙 Dark';
         });
       });
     });
@@ -47,37 +46,51 @@
     ];
     const updatedDateString = `${monthNames[currentMonth]} ${currentYear}`;
 
-    // Inject into .dynamic-edition elements (header badge, hero badges)
+    // Inject into .dynamic-edition elements only if different to prevent layout reflow
     document.querySelectorAll('.dynamic-edition').forEach((el) => {
-      el.textContent = editionText;
+      if (el.textContent !== editionText) {
+        el.textContent = editionText;
+      }
     });
 
-    // Inject into .dynamic-year elements (copyright footer, general references)
+    // Inject into .dynamic-year elements
+    const yearStr = currentYear.toString();
     document.querySelectorAll('.dynamic-year').forEach((el) => {
-      el.textContent = currentYear.toString();
+      if (el.textContent !== yearStr) {
+        el.textContent = yearStr;
+      }
     });
 
     // Inject into .dynamic-next-year elements
+    const nextYearStr = (currentYear + 1).toString();
     document.querySelectorAll('.dynamic-next-year').forEach((el) => {
-      el.textContent = (currentYear + 1).toString();
+      if (el.textContent !== nextYearStr) {
+        el.textContent = nextYearStr;
+      }
     });
 
-    // Inject into .dynamic-updated-date elements (E-E-A-T author box "Last Updated: Month Year")
+    // Inject into .dynamic-updated-date elements
     document.querySelectorAll('.dynamic-updated-date').forEach((el) => {
-      el.textContent = updatedDateString;
+      if (el.textContent !== updatedDateString) {
+        el.textContent = updatedDateString;
+      }
     });
 
     // Automatically update copyright footer text if present
     document.querySelectorAll('.copyright-year').forEach((el) => {
-      el.textContent = currentYear.toString();
+      if (el.textContent !== yearStr) {
+        el.textContent = yearStr;
+      }
     });
 
-    // Auto-update document.title dynamically in Q4 / new years
+    // Auto-update document.title dynamically in Q4 / new years only if needed
     if (document.title && document.title.includes('2026')) {
       const yearReplacement = currentMonth >= 9 
         ? `${currentYear}–${currentYear + 1}` 
         : currentYear.toString();
-      document.title = document.title.replace(/\b2026\b/g, yearReplacement);
+      if (yearReplacement !== '2026') {
+        document.title = document.title.replace(/\b2026\b/g, yearReplacement);
+      }
     }
   };
 
